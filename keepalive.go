@@ -106,6 +106,6 @@ func SetKeepAlive(c net.Conn, idleTime time.Duration, count int, interval time.D
 }
 
 func setNonblock(fd int) error {
-	return os.NewSyscallError("setsockopt", syscall.SetNonblock(fd, true))
+	return os.NewSyscallError("setsockopt", syscall.SetNonblock((syscall.Handle)(fd), true))
 
 }
