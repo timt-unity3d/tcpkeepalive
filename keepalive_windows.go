@@ -1,10 +1,5 @@
 package tcpkeepalive
 
-import (
-	"os"
-	"syscall"
-)
-
 func setIdle(fd int, secs int) error {
 	return nil
 }
